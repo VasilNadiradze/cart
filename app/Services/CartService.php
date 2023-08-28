@@ -8,7 +8,7 @@ class CartService
     {
         $discountIsActive = $this->discountIsActive($cart, $discountGroup);
         $discountedItems = [];
-        $result = [];
+        $result = ['products' => []];
 
         foreach($cart as $cartItem)
         {

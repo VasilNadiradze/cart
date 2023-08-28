@@ -19,7 +19,7 @@ class CartController extends Controller
     public function getUserCart()
     {
         $user = auth()->user();
-        $repositoryResult = $this->cartRepository->getUserCart($user);
+        return $repositoryResult = $this->cartRepository->getUserCart($user);
 
         return response([
             'products' => $repositoryResult['products'],
